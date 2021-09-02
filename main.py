@@ -59,9 +59,12 @@ def gerar_lista_pares(populacao: list):
 
     return metade_individuos1, metade_individuos2
 
+
 def cruzar_pares(populacao1: list, populacao2: list):
-  filhos1 = populacao1 + populacao2
-  filhos2 = populacao2 + populacao1
+    filhos1 = populacao1 + populacao2
+    filhos2 = populacao2 + populacao1
+
+    return filhos1, filhos2
 
 # def aplica_selecao(pais, filhos, tipo, fitness_pais, fitness_filhos):
 #   if tipo == 'nao_elitista':
