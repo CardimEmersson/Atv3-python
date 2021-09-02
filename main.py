@@ -41,7 +41,7 @@ def generatePopulation(quantityElements: int):
         element = generateElement(10)
         population.append(element)
         fitness.append(objectiveFunction(element))
-    return population
+    return population, fitness
 
 
 def introducePopulation(population: list):
@@ -66,58 +66,9 @@ def cruzar_pares(populacao1: list, populacao2: list):
 
     return filhos1, filhos2
 
-# def aplica_selecao(pais, filhos, tipo, fitness_pais, fitness_filhos):
-#   if tipo == 'nao_elitista':
-#     pais = filhos
-#     fitness_pais = fitness_filhos
-
-#   return pais, fitness_pais
-
-
-# def cruzamento_pais(mae,pai):
-#   s = random.randint(0, len(mae) -1)
-#   filho1 = mae[0:s] + pai[s:]
-#   filho2 = pai[0:s] + mae[s:]
-
-#   return filho1,filho2
-
-# def cruzarpopulacao():
-#   par1,par2 = pares_cruzamento(populacao)
-#   nova_pop = cruzar_pares(par1,par2)
-
-#   nova_pop = nova_pop[:len(populacao)]
-#   return nova_pop
-
-# def mutacao(individuo):
-#   x = random.randint(1, len(individuo) - 1)
-#   individuo[x] = 1 - individuo[x]
-#   return individuo
-
-# def mutacao_populacao(populacao, fator_mutacao):
-#   for i in populacao:
-#     x = random.random()
-
-#     if x < fator_mutacao:
-#       i = mutacao(i)
-#   return populacao
-
 
 # -----------------------------------------------------------------
-# fitnessList = []
 populacao1 = generatePopulation(4)
 
 par1, par2 = gerar_lista_pares(populacao1)
 filho1, filho2 = cruzar_pares(par1, par2)
-# print(teste)
-
-# n_geracoes = 3
-# for i in range(n_geracoes):
-#   ger_z = cruzar_pop(populacao_inicial)
-
-#   ger_z = mutacao_populacao(ger_z, 0.7)
-
-# for element in population:
-#   fitnessList.append(element[1])
-
-# print(fitnessList)
-# introducePopulation(population)
