@@ -104,11 +104,10 @@ def cruzar_pares(populacao1: list, populacao2: list):
 
 # -----------------------------------------------------------------
 # fitnessList = []
-population = generatePopulation(4)
+populacao1 = generatePopulation(4)
 
-print(population)
-print(population[round(len(population) / 2):len(population)])
-# teste = gerar_lista_pares(population)
+par1, par2 = gerar_lista_pares(populacao1)
+filho1, filho2 = cruzar_pares(par1, par2)
 # print(teste)
 
 # n_geracoes = 3
